@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The B-Love | Luxury Book Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="ink-flow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">The B-Love</span>
+      <span class="brand-subtitle">A Floating Library of Quiet Wealth</span>
+    </div>
+    <nav class="menu">
+      <button class="menu-link interactive" data-panel="about">About the Author</button>
+      <button class="menu-link interactive" data-panel="collection">Collection</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Emotion in Motion, Bound in Silence.</h1>
+      <p>
+        The B-Love is a curated digital gallery where books drift like memories in water.
+        Hover to lift, swipe to wander, and step inside the story.
+      </p>
+    </section>
+
+    <section class="carousel-section" id="collection">
+      <div class="carousel" aria-label="Book carousel">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="detail-panel" id="detailPanel" aria-hidden="true">
+    <button class="panel-close interactive" id="closePanel" aria-label="Close details">✕</button>
+    <div class="panel-content">
+      <div class="panel-visual">
+        <div class="panel-cover" id="panelCover"></div>
+        <span class="panel-edition" id="panelEdition"></span>
+      </div>
+      <div class="panel-text">
+        <h2 id="panelTitle"></h2>
+        <p class="panel-description" id="panelDescription"></p>
+        <div class="panel-meta">
+          <span id="panelGenre"></span>
+          <span id="panelRelease"></span>
+        </div>
+        <dl class="panel-details">
+          <div>
+            <dt>Author</dt>
+            <dd id="panelAuthor"></dd>
+          </div>
+          <div>
+            <dt>Pages</dt>
+            <dd id="panelPages"></dd>
+          </div>
+          <div>
+            <dt>Language</dt>
+            <dd id="panelLanguage"></dd>
+          </div>
+          <div>
+            <dt>Binding</dt>
+            <dd id="panelBinding"></dd>
+          </div>
+        </dl>
+        <button class="panel-button interactive" id="openPdf">Read the PDF</button>
+      </div>
+    </div>
+  </aside>
+
+  <section class="about-panel" id="aboutPanel" aria-hidden="true">
+    <div class="about-content">
+      <h2>About the Author</h2>
+      <p>
+        An architect of emotion, the author crafts stories that drift between longing and
+        legacy. Each title is a slow-breathing meditation on intimacy, power, and the quiet
+        wealth of memory.
+      </p>
+      <p>
+        The B-Love is a personal gallery of their most treasured works, presented as floating
+        relics in a digital salon.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>Copyright 2026 — The B-Love Atelier</span>
+  </footer>
+
+  <div class="modal" id="pdfModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close interactive" id="closeModal" aria-label="Close PDF viewer">✕</button>
+      <iframe id="pdfFrame" title="PDF Viewer"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
